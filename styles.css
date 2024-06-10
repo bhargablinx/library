@@ -45,13 +45,14 @@ main {
     align-items: center;
 }
 
-button {
+.top button {
     font-size: 1.2rem;
     padding: 1.5rem;
     width: 150px;
     background-color: var(--main-clr);
     border-radius: 25px;
     border-color: var(--sec-clr);
+    margin: 20px;
 }
 
 .container {
@@ -95,4 +96,30 @@ button {
     margin-top: 25px;
     margin-left: auto;
     border-radius: 10px;
+    background-color: var(--main-clr);
+    border-color: var(--sec-clr);
+}
+
+.popup {
+    position: absolute;
+    top: 120px;
+    right: 900px;
+    z-index: 1;
+}
+
+.popup-dialog {
+    width: 500px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container input {
+    margin-right: 25px;
+}
+
+#reading {
+    margin: 2px;
 }
