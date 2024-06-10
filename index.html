@@ -16,22 +16,26 @@
       <div class="logo-title">Library</div>
     </header>
     <main>
-      <div class="top"><button>Add Book</button></div>
-      <div class="popup">
+      <div class="top"><button id="addBookBtn">Add Book</button></div>
+      <div class="popup-hidden popup dialog-box">
         <dialog class="popup-dialog" open>
           <p>Enter data</p>
-          <form method="dialog">
+          <form>
             <div class="form-container">
-                <div class="row">
-                    <input type="text" name="book-name" placeholder="Book Name"/>
-                    <input type="text" name="author-name" placeholder="Author Name">
-                </div>
-                <div class="row">
-                    <input type="number" name="pages" placeholder="total pages">
-                    <input type="checkbox" name="reading-status" id="reading">
-                    <label for="reading">Have you read</label>
-                </div>
-                <div class="row"><button>OK</button></div>
+              <div class="row">
+                <input type="text" name="book-name" placeholder="Book Name" />
+                <input
+                  type="text"
+                  name="author-name"
+                  placeholder="Author Name"
+                />
+              </div>
+              <div class="row">
+                <input type="number" name="pages" placeholder="total pages" />
+                <input type="checkbox" name="reading-status" id="reading" />
+                <label for="reading">Have you read</label>
+              </div>
+              <div class="row"><button>OK</button></div>
             </div>
           </form>
         </dialog>

@@ -100,11 +100,18 @@ main {
     border-color: var(--sec-clr);
 }
 
+/* Dialog hidden */
+.popup-hidden {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* Dialog Shown */
 .popup {
     position: absolute;
     top: 120px;
-    right: 900px;
-    z-index: 1;
+    right: 800px;
 }
 
 .popup-dialog {
