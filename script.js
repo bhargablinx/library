@@ -20,7 +20,5 @@ function addBookToLibrary(title, author, page, status) {
 }
 
 addBookBtn.addEventListener('click', () => {
-    dialogBox.classList.remove("popup-hidden");
-    let title = 
-    
+    dialogBox.classList.remove("popup-hidden");    
 });

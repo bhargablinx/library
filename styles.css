@@ -100,24 +100,6 @@ main {
     border-color: var(--sec-clr);
 }
 
-/* Dialog hidden */
-.popup-hidden {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-}
-
-/* Dialog Shown */
-.popup {
-    position: absolute;
-    top: 120px;
-    right: 800px;
-}
-
-.popup-dialog {
-    width: 500px;
-}
-
 .form-container {
     display: flex;
     flex-direction: column;
@@ -129,4 +111,13 @@ main {
 
 #reading {
     margin: 2px;
+}
+
+.dialog-box {
+    border: 1px solid rgb(171, 171, 171);
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    top: 120px;
+    left: 40px;
 }
