@@ -1,5 +1,10 @@
 const addBookBtn = document.querySelector("#addBookBtn");
 const dialogBox = document.querySelector(".dialog-box");
+let titleRef = document.querySelector(".book-title")
+let authorRef = document.querySelector(".author")
+let pagesRef = document.querySelector(".pages")
+let statusRef = document.querySelector(".status")
+
 
 let myLibrary = [];
 
@@ -11,7 +16,6 @@ function Book(title, author, page, status) {
 }
 
 let got = new Book("Songs of ice and fire", "RR Martin", 5532, "no")
-console.log(got)
 myLibrary.push(got);
 
 function addBookToLibrary(title, author, page, status) {
@@ -20,5 +24,9 @@ function addBookToLibrary(title, author, page, status) {
 }
 
 addBookBtn.addEventListener('click', () => {
-    dialogBox.classList.remove("popup-hidden");    
+    let name = titleRef.value;
+    let writer = authorRef.value;
+    let pageCount = pagesRef.value;
+    let status = statusRef.value
+    addBookToLibrary(name, writer, pageCount, status)
 });
