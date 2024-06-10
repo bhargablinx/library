@@ -52,5 +52,5 @@ addBookBtn.addEventListener('click', () => {
     bookCard.appendChild(updBtn);
 });
 
-let got = new Book("Songs of ice and fire", "RR Martin", 5532, "no")
-myLibrary.push(got);
+// let got = new Book("Songs of ice and fire", "RR Martin", 5532, "no")
+// myLibrary.push(got);
