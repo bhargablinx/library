@@ -27,6 +27,14 @@ document.querySelector('#cross').addEventListener('click', () => {
     addForm.style.display = 'none';
 })
 
+document.querySelector(".add").addEventListener('click', (e) => {
+    const title = document.querySelector("#b-name");
+    const author = document.querySelector("#b-author");
+    const page = document.querySelector("#b-page");
+    new Book(title.value, author.value, page.value);
+    e.preventDefault();
+})
+
 function addBookToDOM(book) {
     const card = document.createElement("div");
     card.className = 'card';
@@ -72,7 +80,7 @@ deleteBtn.forEach((element) => {
     });
 })
 
-const options = document.querySelectorAll("option");
+let options = document.querySelectorAll("option");
 options.forEach((element) => {
     element.addEventListener('click', (e) => {
         let status = e.target.value;
