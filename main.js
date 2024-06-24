@@ -32,6 +32,8 @@ document.querySelector(".add").addEventListener('click', (e) => {
     const author = document.querySelector("#b-author");
     const page = document.querySelector("#b-page");
     new Book(title.value, author.value, page.value);
+    updateOption();
+    updateDtlBtn();
     e.preventDefault();
 })
 
@@ -72,27 +74,31 @@ function addBookToDOM(book) {
     bookShelf.appendChild(card);
 }
 
-const deleteBtn = document.querySelectorAll(".delete");
-deleteBtn.forEach((element) => {
-    element.addEventListener('click', (e) => {
-        let card = e.target.parentNode;
-        console.log(card.remove());
-    });
-})
-
-let options = document.querySelectorAll("option");
-options.forEach((element) => {
-    element.addEventListener('click', (e) => {
-        let status = e.target.value;
-        let card = e.target.parentNode.parentNode;
-        if (status === 'Reading') {
-            card.classList.remove('read');
-            card.classList.add('reading')
-        } else if (status === 'Finish Reading') {
-            card.classList.remove('reading');
-            card.classList.add('read')
-        } else {
-            card.classList.remove('reading', 'read');
-        }
+function updateDtlBtn() {
+    const deleteBtn = document.querySelectorAll(".delete");
+    deleteBtn.forEach((element) => {
+        element.addEventListener('click', (e) => {
+            let card = e.target.parentNode;
+            console.log(card.remove());
+        });
     })
-})
+}
+
+function updateOption() {
+    const options = document.querySelectorAll("option");
+    options.forEach((element) => {
+        element.addEventListener('click', (e) => {
+            let status = e.target.value;
+            let card = e.target.parentNode.parentNode;
+            if (status === 'Reading') {
+                card.classList.remove('read');
+                card.classList.add('reading')
+            } else if (status === 'Finish Reading') {
+                card.classList.remove('reading');
+                card.classList.add('read')
+            } else {
+                card.classList.remove('reading', 'read');
+            }
+        })
+    })
+}
