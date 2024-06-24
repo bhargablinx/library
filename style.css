@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #0b1228;
+}
+
+.book-shelf {
+    margin: auto;
+    margin-top: 150px;
+    background-color: #dbeafe;
+    border-radius: 15px;
+    max-width: 80vw;
+    /* width: auto; */
+    min-height: 500px;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 10px;
+    margin: 10px;
+    background-color: #eff6ff;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+    border: 1px solid #172554;
+}
+
+.card button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+select {
+    background-color: #172554;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}

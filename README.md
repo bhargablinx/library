@@ -1,3 +1,1 @@
 # Library
-
-![Preview](library.png)
