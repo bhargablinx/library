@@ -1,5 +1,4 @@
 const bookShelf = document.querySelector(".book-shelf");
-const myLibrary = [];
 
 function Book(title, author, pages, read) {
     this.title = title,
@@ -9,9 +8,6 @@ function Book(title, author, pages, read) {
     this.info = () => {
         console.log(this);
     }
-    (this.addBookToLibrary = () => {
-        myLibrary.push(this);
-    })();
     addBookToDOM(this);
 }
 
@@ -52,8 +48,17 @@ function addBookToDOM(book) {
     opt3.textContent = 'Finish Reading'
     select.appendChild(opt3);
     card.appendChild(select);
-    const btn = document.createElement("button")
+    const btn = document.createElement("button");
+    btn.className = 'delete'
     btn.textContent = 'delete'
     card.appendChild(btn)
     bookShelf.appendChild(card);
 }
+
+const deleteBtn = document.querySelectorAll(".delete");
+deleteBtn.forEach((element) => {
+    element.addEventListener('click', (e) => {
+        let card = e.target.parentNode;
+        console.log(card.remove());
+    });
+})
