@@ -6,12 +6,10 @@ body {
 }
 
 .book-shelf {
-    margin: auto;
-    margin-top: 100px;
+    margin: 100px 300px;
     background-color: #dbeafe;
     border-radius: 15px;
-    max-width: 80vw;
-    /* width: auto; */
+    width: auto;
     min-height: 500px;
     height: auto;
     padding: 20px;

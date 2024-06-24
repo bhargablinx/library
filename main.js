@@ -16,8 +16,6 @@ function Book(title, author, pages, read) {
 const b1 = new Book('A Song of ice and fire', 'Gorge RR Martin', 5500, true);
 const b2 = new Book("Dance of dragons", "Gorge RR Martin", 2000, false);
 const b3 = new Book("Atomic Habit", "James Clear", 302, true);
-const b4 = new Book("Power of Habit", "Unknown", 402, false);
-const b5 = new Book("Power of Now", "Unknown", 402, false);
 
 document.querySelector('.add-book').addEventListener('click', () => {
     addForm.style.display = 'block';
@@ -34,6 +32,7 @@ document.querySelector(".add").addEventListener('click', (e) => {
     new Book(title.value, author.value, page.value);
     updateOption();
     updateDtlBtn();
+    addForm.style.display = 'none';
     e.preventDefault();
 })
 
