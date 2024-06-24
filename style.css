@@ -7,7 +7,7 @@ body {
 
 .book-shelf {
     margin: auto;
-    margin-top: 150px;
+    margin-top: 100px;
     background-color: #dbeafe;
     border-radius: 15px;
     max-width: 80vw;
@@ -54,4 +54,84 @@ select {
 
 .reading {
     background-color: rgba(255, 255, 0, 0.3);
+}
+
+header {
+    box-sizing: border-box;
+    background-color: #0b1228;
+    color: #dbeafe;
+    width: 100vw;
+    height: 80px;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+}
+
+header .title {
+    font-size: 2rem;
+}
+
+header button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.book-form {
+    display: none;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0; 
+    right: 0;
+    margin-top: 20vh;
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: #0c4a6e;
+    border-radius: 15px;
+    width: 350px;
+    height: 400px;
+    color: #dbeafe;
+    padding: 10px;
+}
+
+form {
+    text-align: center;
+    position: relative;
+}
+
+form > div {
+    margin: 15px 0;
+}
+
+.book-form label {
+    display: block;
+}
+
+.status-sec select {
+    background-color: #dbeafe;
+    color: #0b1228;
+}
+
+form .add {
+    padding: 3px 25px;
+    background-color: #3b82f6;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #dbeafe;
+    cursor: pointer;
+}
+
+#cross {
+    position: absolute;
+    right: 20px;
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+}
+
+.blur {
+    filter: blur(2px);
 }

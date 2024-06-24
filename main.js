@@ -1,4 +1,6 @@
 const bookShelf = document.querySelector(".book-shelf");
+const addForm = document.querySelector(".book-form");
+const header = document.querySelector("header");
 
 function Book(title, author, pages, read) {
     this.title = title,
@@ -16,6 +18,14 @@ const b2 = new Book("Dance of dragons", "Gorge RR Martin", 2000, false);
 const b3 = new Book("Atomic Habit", "James Clear", 302, true);
 const b4 = new Book("Power of Habit", "Unknown", 402, false);
 const b5 = new Book("Power of Now", "Unknown", 402, false);
+
+document.querySelector('.add-book').addEventListener('click', () => {
+    addForm.style.display = 'block';
+})
+
+document.querySelector('#cross').addEventListener('click', () => {
+    addForm.style.display = 'none';
+})
 
 function addBookToDOM(book) {
     const card = document.createElement("div");
@@ -61,7 +71,6 @@ deleteBtn.forEach((element) => {
         console.log(card.remove());
     });
 })
-
 
 const options = document.querySelectorAll("option");
 options.forEach((element) => {

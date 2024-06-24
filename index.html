@@ -3,11 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/5593a2500e.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css" />
     <title>Library</title>
   </head>
   <body>
+    <header class="">
+      <div class="title">Library</div>
+      <button class="add-book"><i class="fa-solid fa-plus"></i> Add Book</button>
+    </header>
+    <div class="book-form">
+      <form>
+        <i class="fa-solid fa-xmark" id="cross"></i>
+        <div class="name-sec">
+          <label for="b-name">Book Title: </label>
+          <input type="text" id="b-name">
+        </div>
+        <div class="author-sec">
+          <label for="b-author">Author: </label>
+          <input type="text" id="b-author">
+        </div>
+        <div class="page-sec">
+          <label for="b-page">Page Count: </label>
+          <input type="number" id="b-page">
+        </div>
+        <div class="status-sec">
+          <select>
+            <option disabled selected>Status</option>
+            <option>Not Read Yet</option>
+            <option>Reading</option>
+            <option>Finish Reading</option>
+          </select>
+        </div>
+        <input type="button" value="Add" class="add">
+      </form>
+    </div>
     <div class="book-shelf">
       <div class="card read">
         <p class="title">A Song of ice and fire</p>
