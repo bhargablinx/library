@@ -32,7 +32,6 @@ function addBookToDOM(book) {
     page.textContent = `Page Count: ${book.pages}`;
     card.appendChild(page);
     const select = document.createElement("select");
-    select.id = 'read';
     const optD = document.createElement("option");
     optD.selected = true;  // Set the option as selected
     optD.disabled = true;  // Disable the option to make it a placeholder
