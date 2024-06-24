@@ -61,3 +61,21 @@ deleteBtn.forEach((element) => {
         console.log(card.remove());
     });
 })
+
+
+const options = document.querySelectorAll("option");
+options.forEach((element) => {
+    element.addEventListener('click', (e) => {
+        let status = e.target.value;
+        let card = e.target.parentNode.parentNode;
+        if (status === 'Reading') {
+            card.classList.remove('read');
+            card.classList.add('reading')
+        } else if (status === 'Finish Reading') {
+            card.classList.remove('reading');
+            card.classList.add('read')
+        } else {
+            card.classList.remove('reading', 'read');
+        }
+    })
+})
