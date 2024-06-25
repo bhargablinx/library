@@ -6,16 +6,15 @@ function Book(title, author, pages, read) {
     this.title = title,
     this.author = author,
     this.pages = pages,
-    this.read = read,
     this.info = () => {
         console.log(this);
     }
     addBookToDOM(this);
 }
 
-const b1 = new Book('A Song of ice and fire', 'Gorge RR Martin', 5500, true);
-const b2 = new Book("Dance of dragons", "Gorge RR Martin", 2000, false);
-const b3 = new Book("Atomic Habit", "James Clear", 302, true);
+const b1 = new Book('A Song of ice and fire', 'Gorge RR Martin', 5500);
+const b2 = new Book("Dance of dragons", "Gorge RR Martin", 2000);
+const b3 = new Book("Atomic Habit", "James Clear", 302);
 
 document.querySelector('.add-book').addEventListener('click', () => {
     addForm.style.display = 'block';
@@ -101,3 +100,6 @@ function updateOption() {
         })
     })
 }
+
+updateOption();
+updateDtlBtn();
